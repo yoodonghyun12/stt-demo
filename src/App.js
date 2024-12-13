@@ -52,8 +52,32 @@
 
 
 
+// import React, { useState } from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Home from "./components/Home";
+// import STTDemo from "./components/STTDemo";
+
+// function App() {
+//   const [userInfo, setUserInfo] = useState({}); // 사용자 정보 상태 관리
+
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<Home setUserInfo={setUserInfo} />} />
+//         <Route path="/stt" element={<STTDemo userInfo={userInfo} />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import STTDemo from "./components/STTDemo";
 
@@ -61,14 +85,11 @@ function App() {
   const [userInfo, setUserInfo] = useState({}); // 사용자 정보 상태 관리
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home setUserInfo={setUserInfo} />} />
-        <Route path="/stt" element={<STTDemo userInfo={userInfo} />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home setUserInfo={setUserInfo} />} />
+      <Route path="/stt" element={<STTDemo userInfo={userInfo} />} />
+    </Routes>
   );
 }
 
 export default App;
-
